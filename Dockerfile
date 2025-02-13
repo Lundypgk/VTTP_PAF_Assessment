@@ -21,7 +21,7 @@ WORKDIR /
 # Copy the Maven build output (JAR file) into the container
 COPY --from=build /movies/target/movies-0.0.1-SNAPSHOT.jar project.jar
 # Copy the Data folder into the container
-COPY data /data
+COPY /data ./data
 # Expose the port your application runs on
 # EXPOSE 8080
 
