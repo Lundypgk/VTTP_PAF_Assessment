@@ -123,8 +123,9 @@ public List<DirectorStatistics> getProlificDirectors(int count) {
         
         Map<String, Object> params = new HashMap<>();
         params.put("DIRECTOR_TABLE_DATASET", directorDS);
-        
-        File reportFile = new File("../data/director_movies_report.jrxml"); 
+
+        File reportFile = new File("./data/director_movies_report.jrxml");
+        // File reportFile = new File("director_movies_report.jrxml");
         JasperReport report = JasperCompileManager.compileReport(reportFile.getAbsolutePath());
         
         JasperPrint print = JasperFillManager.fillReport(report, params, reportDS);
