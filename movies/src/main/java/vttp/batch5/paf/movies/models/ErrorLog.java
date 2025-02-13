@@ -13,7 +13,6 @@ public class ErrorLog {
     private String error;
     private Date timestamp;
 
-    // Getters and Setters
     public List<String> getImdb_ids() {
         return imdb_ids;
     }
